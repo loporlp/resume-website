@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Section from '../components/Section.astro';
+import Experience from '../components/Experience.astro';
+import Education from '../components/Education.astro';
+import Skills from '../components/Skills.astro';
+---
+
+<Layout title="Mason Sansom - Software Engineer">
+  <Header
+    name="Mason Sansom"
+    title="Associate Software Engineer"
+    email="masonsansom02@gmail.com"
+    linkedin="https://linkedin.com/in/mason-sansom"
+    github="https://github.com/loporlp"
+    location="Minneapolis, MN"
+  />
+
+  <Section title="Experience">
+    <Experience
+      company="Best Buy"
+      role="Associate Software Engineer"
+      startDate="May 2025"
+      endDate="Present"
+      location="Minneapolis, MN"
+      highlights={[
+        "Engineered high-throughput data pipelines using Google Cloud Platform and Java to process customer interaction data, enabling faster decision-making and data-driven customer experiences",
+        "Migrated data architecture to composite feature storage, reducing monthly Dataflow costs by 96% (from $1,356 to $52) and improving data accessibility for ML and analytics teams",
+        "Migrated an existing Dataflow pipeline to a Cloud Function, reducing yearly costs from $1,300 to $4, a 99.7% reduction, while maintaining full functionality",
+        "Took ownership of end-to-end data flow and collaborated cross-functionally with data science and analytics teams to continuously improve pipeline reliability and scalability",
+      ]}
+    />
+    <Experience
+      company="Best Buy"
+      role="Associate Software Engineer Intern"
+      startDate="June 2024"
+      endDate="Aug 2024"
+      location="Minneapolis, MN"
+      highlights={[
+        "Developed and maintained large-scale ETL pipelines using BigQuery and Google Cloud Platform, supporting critical business data workflows",
+        "Implemented and optimized backend services with Java and Micronaut, enhancing system performance and resilience under load",
+      ]}
+    />
+  </Section>
+
+  <Section title="Projects">
+    <Experience
+      company="Node.js, AWS EC2, PostgreSQL, Amazon RDS, S3"
+      role="Easy Going"
+      startDate="Jan 2025"
+      endDate="May 2025"
+      highlights={[
+        "Designed and deployed a Node.js backend on AWS EC2 with PostgreSQL on Amazon RDS and integrated AWS S3 for secure, scalable cloud infrastructure",
+        "Built RESTful APIs and an intelligent photo caching system, reducing redundant external API calls and improving responsiveness and cost-efficiency",
+      ]}
+    />
+    <Experience
+      company="C, Systems Programming"
+      role="Memory Allocator"
+      startDate="Sept 2024"
+      endDate="Dec 2024"
+      highlights={[
+        "Implemented a custom dynamic memory allocator in C, including malloc, free, and realloc using an explicit free list with first-fit allocation",
+        "Optimized memory management with block splitting, coalescing, and 16-byte alignment, reducing fragmentation and improving allocation efficiency",
+      ]}
+    />
+  </Section>
+
+  <Section title="Education">
+    <Education
+      institution="University of Utah"
+      degree="Bachelor of Science"
+      field="Computer Science, Minor in Mathematics"
+      startDate="Aug 2021"
+      endDate="May 2025"
+      location="Salt Lake City, UT"
+      details={[
+        "GPA: 3.90",
+      ]}
+    />
+  </Section>
+
+  <Section title="Technical Skills">
+    <Skills
+      categories={[
+        {
+          category: "Languages",
+          skills: ["Java", "C++", "Python", "C", "C#", "JavaScript", "Node.js", "React Native"],
+        },
+        {
+          category: "Cloud & Tools",
+          skills: ["Google Cloud Platform", "BigQuery", "Dataflow", "Cloud Functions", "AWS", "EC2", "RDS", "S3", "Docker", "Git", "Linux", "Firebase Auth", "CI/CD"],
+        },
+        {
+          category: "Databases",
+          skills: ["PostgreSQL", "SQL Schema Design"],
+        },
+      ]}
+    />
+  </Section>
+
+  <Section title="Activities & Leadership">
+    <div class="flex flex-wrap gap-2.5">
+      <span class="skill-tag">University of Utah Marching Band</span>
+      <span class="skill-tag">Coding Club</span>
+      <span class="skill-tag">University E-Sports Team</span>
+    </div>
+  </Section>
+</Layout>

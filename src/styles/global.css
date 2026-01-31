@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply text-slate-300 antialiased bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-xs font-semibold text-slate-400 uppercase tracking-[0.1em] mb-5
+           relative inline-block;
+  }
+
+  .section-title::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-blue-500/40 to-transparent;
+    transform: translateY(8px);
+  }
+
+  .card {
+    @apply bg-slate-800/60 backdrop-blur-xl rounded-xl border border-slate-700/60
+           shadow-lg shadow-black/10 transition-all duration-300;
+  }
+
+  .card:hover {
+    @apply border-slate-600/80 shadow-xl shadow-black/20;
+  }
+
+  .skill-tag {
+    @apply px-3.5 py-2 bg-slate-800/80 text-slate-300 text-sm font-medium rounded-lg
+           border border-slate-700/50 hover:border-blue-500/50 hover:bg-slate-700/80
+           hover:text-white transition-all duration-200 cursor-default;
+  }
+
+  .link-hover {
+    @apply text-slate-400 hover:text-blue-400 transition-colors duration-200
+           underline decoration-slate-700 hover:decoration-blue-500 underline-offset-4;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5
+           bg-gradient-to-br from-blue-600 to-blue-700
+           hover:from-blue-500 hover:to-blue-600
+           text-white text-sm font-semibold rounded-lg
+           shadow-lg shadow-blue-900/30 hover:shadow-blue-900/50
+           transition-all duration-200 transform hover:scale-105;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    @apply bg-white text-slate-900;
+    background: white !important;
+  }
+
+  .card {
+    @apply bg-white shadow-none border border-slate-200;
+  }
+
+  .card:hover {
+    @apply border-slate-200 shadow-none;
+  }
+
+  .section-title {
+    @apply text-slate-700;
+  }
+
+  .section-title::after {
+    @apply bg-slate-300;
+  }
+
+  .skill-tag {
+    @apply bg-slate-50 text-slate-700 border-slate-300;
+  }
+
+  .skill-tag:hover {
+    @apply bg-slate-50 text-slate-700 border-slate-300;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-slate-900;
+  }
+
+  p, span, li, a {
+    @apply text-slate-700;
+  }
+
+  .link-hover {
+    @apply text-slate-700 no-underline;
+  }
+}
