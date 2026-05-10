@@ -10,7 +10,7 @@ import Skills from '../components/Skills.astro';
 <Layout title="Mason Sansom - Software Engineer">
   <Header
     name="Mason Sansom"
-    title="Associate Software Engineer"
+    title="Software Engineer"
     email="masonsansom02@gmail.com"
     linkedin="https://linkedin.com/in/mason-sansom"
     github="https://github.com/loporlp"
@@ -18,6 +18,17 @@ import Skills from '../components/Skills.astro';
   />
 
   <Section title="Experience">
+    <Experience
+      company="Best Buy"
+      role="Software Engineer I"
+      startDate="May 2025"
+      endDate="Present"
+      location="Minneapolis, MN"
+      highlights={[
+        "Develop and maintain enterprise Java applications using Spring Boot for Repair Workbench, an internal Geek Squad tool used by agents in stores and repair centers to facilitate end-user device repairs",
+        "Build and enhance microservices-based APIs and reusable components to standardize service workflows across in-store repairs, vendor servicing, advanced repair, parts replacement, and device exchange",
+      ]}
+    />
     <Experience
       company="Best Buy"
       role="Associate Software Engineer"
@@ -56,13 +67,13 @@ import Skills from '../components/Skills.astro';
       ]}
     />
     <Experience
-      company="C, Systems Programming"
-      role="Memory Allocator"
-      startDate="Sept 2024"
-      endDate="Dec 2024"
+      company="Python, scikit-learn, XGBoost, Pandas"
+      role="CS2 Predictor"
+      startDate="Jan 2025"
+      endDate="Feb 2025"
       highlights={[
-        "Implemented a custom dynamic memory allocator in C, including malloc, free, and realloc using an explicit free list with first-fit allocation",
-        "Optimized memory management with block splitting, coalescing, and 16-byte alignment, reducing fragmentation and improving allocation efficiency",
+        "Built an end-to-end ML pipeline that collects CS2 match data from the Liquipedia API, engineers 26 features (Elo ratings, rolling win rates, form, streaks, head-to-head records), and trains classification models to predict match outcomes",
+        "Achieved ~65% accuracy and ~0.70 AUC with logistic regression, using chronological train/test splits to prevent data leakage and log loss for model selection across four classifiers",
       ]}
     />
   </Section>
@@ -71,7 +82,7 @@ import Skills from '../components/Skills.astro';
     <Education
       institution="University of Utah"
       degree="Bachelor of Science"
-      field="Computer Science, Minor in Mathematics"
+      field="Computer Science"
       startDate="Aug 2021"
       endDate="May 2025"
       location="Salt Lake City, UT"
